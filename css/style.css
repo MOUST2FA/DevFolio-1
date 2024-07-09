@@ -1,0 +1,369 @@
+:root {
+    --minColor: #0078ff;
+    --secondaryColor: #4e4e54;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* !------------------------------------Navbar-------------------------------! */
+
+.navbar {
+    background-color: rgba(0, 0, 0, .9);
+}
+
+.navbar .nav-item .active{
+   border-bottom:3px solid #fff;
+}
+
+.navbar a {
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+/* !------------------------------------Home-------------------------------! */
+
+.home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hero-bg.jpg);
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    position: relative;
+}
+
+.home h1 {
+    font-size: 70px;
+    font-weight: 600;
+}
+
+.home p {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.home p::after {
+    content: "";
+    position: absolute;
+    animation-name: anmTitle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes anmTitle {
+
+    0% {
+        content: "D|";
+    }
+
+    6% {
+        content: "De|";
+    }
+
+    12% {
+        content: "Dev|";
+    }
+
+    18% {
+        content: "Deve|";
+    }
+
+    24% {
+        content: "Devel|";
+    }
+
+    30% {
+        content: "Develo|";
+    }
+
+    36% {
+        content: "Develop|";
+    }
+
+    42% {
+        content: "Develope|";
+    }
+
+    48% {
+        content: "Developer|";
+    }
+
+    54% {
+        content: "D|";
+    }
+
+    60% {
+        content: "De|";
+    }
+
+    66% {
+        content: "Des|";
+    }
+
+    72% {
+        content: "Desi|";
+    }
+
+    78% {
+        content: "Desig|";
+    }
+
+    84% {
+        content: "Design|";
+    }
+
+    90% {
+        content: "Designe|";
+    }
+
+    100% {
+        content: "Designer|";
+    }
+
+}
+
+/* !------------------------------------About-------------------------------! */
+
+.about .parent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about .line {
+    width: 20%;
+    height: 3px;
+    background-color: var(--minColor);
+    margin: 10px 0;
+}
+
+/* !------------------------------------SERVICES-------------------------------! */
+
+.services .line {
+    width: 4%;
+    height: 5px;
+    background-color: var(--minColor);
+    margin: 10px 0;
+    margin: auto;
+}
+
+.services .icon {
+    margin: auto;
+    width: 120px;
+    height: 120px;
+    border: 11px solid var(--minColor);
+    border-radius: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: .7s;
+}
+
+.services .icon i {
+    font-size: 30px;
+}
+
+.services .hover-Icon:hover .icon {
+    border: 11px solid #cde1f8;
+    background-color:  var(--minColor);
+    color: #fff;
+}
+
+
+/* !------------------------------------WORK-------------------------------! */
+
+.work {
+    background-image: linear-gradient(#0077ffa7,#0077ffa7) , url(../img/post-3.jpg);
+    background-attachment: fixed;
+    padding: 70px 0;
+}
+
+
+.work .icon{
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    border: 9px solid #fff;
+    border-radius: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.work .icon i{
+    font-size: 30px;
+    color: #fff;
+}
+
+
+/* !------------------------------------PORTFOLIO-------------------------------! */
+
+.portfolio .line{
+    width: 4%;
+    height: 5px;
+    background-color: var(--minColor);
+    margin: 10px 0;
+    margin: auto;
+}
+
+.portfolio .cards{
+    overflow: hidden;
+}
+
+.portfolio .card img{
+    transition: .7s;
+}
+
+.portfolio .card i:hover{
+    cursor: pointer;
+}
+
+.portfolio .card img:hover{
+    transform: scale(1.3);
+}
+
+
+/* !------------------------------------SLIDER-------------------------------! */
+
+.slider{
+    background-image:linear-gradient(#0077ffa7,#0077ffa7), url(../img/overlay-bg.jpg);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    padding: 100px;
+}
+
+.carousel-inner .imgs{
+    margin-bottom: 20%;
+}
+
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: .5;
+    transition: opacity .6s ease;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+}
+
+
+/* !------------------------------------BLOG-------------------------------! */
+
+.blog .line{
+    width: 4%;
+    height: 5px;
+    background-color: var(--minColor);
+    margin: 10px 0;
+    margin: auto;
+}
+
+.blog .card .imgs{
+    width: 30px;
+    border-radius: 50%;
+}
+
+.blog .card .bg-color{
+    position: relative;
+}
+
+.blog .card .bg-color-1{
+    background-color: #0078ff;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px;
+    width: fit-content;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.blog .card h5{
+    transition: .5s;
+}
+
+.blog .card h5:hover{
+    color: #0078ff;
+    cursor: pointer;
+}
+
+
+/* !------------------------------------CONTACT-------------------------------! */
+
+.contact{
+    background-image:linear-gradient(#0077ffa7,#0077ffa7), url(../img/overlay-bg.jpg);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    padding: 100px 0px 30px 0px;
+}
+
+.contact .line{
+    width: 20%;
+    height: 3px;
+    background-color: var(--minColor);
+    margin: 10px 0;
+}
+
+.contact textarea{
+    resize: none;
+    height: 120px;
+}
+
+.contact .parent .child{
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--minColor);
+    border-radius: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+.contact .parent .child:hover{
+    border: 3px solid #cde1f8;  
+    background-color:  var(--minColor);
+    color: #fff;
+}
+
+
+/* !------------------------------------FOOTER-------------------------------! */
+
+.bg_color{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
